@@ -1,34 +1,20 @@
-Python 3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)] on win32
-Type "help", "copyright", "credits" or "license()" for more information.
->>> 
-=========================== RESTART: C:\Users\Anshu\Desktop\zz.py ==========================
-Enter the Number : 34
-34 Number is not Prime
->>> 
-=========================== RESTART: C:\Users\Anshu\Desktop\zz.py ==========================
-Enter the Number : 43
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
-43 Number is Prime
->>> 
-=========================== RESTART: C:\Users\Anshu\Desktop\zz.py ==========================
-Enter the Number : 43
-43 Number is Prime
->>> 
+num = int(input("Enter a number: "))
+
+flag = False
+
+if num == 1:
+    print(num, "is not a prime number")
+elif num > 1:
+    # check for factors
+    for i in range(2, num):
+        if (num % i) == 0:
+            # if factor is found, set flag to True
+            flag = True
+            # break out of loop
+            break
+
+    # check if flag is True
+    if flag:
+        print(num, "is not a prime number")
+    else:
+        print(num, "is a prime number")
